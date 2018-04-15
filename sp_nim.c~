@@ -17,7 +17,7 @@ int get_nim_sum(int heap_num, int heaps[MAX_HEAPS]){
 	for(i = 0; i<heap_num; i++){
 		nim_sum ^= heaps[i];
 	}
-	return nim_sum;
+	return nim_sum
 }
 
 /*
