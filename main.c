@@ -20,13 +20,19 @@ int main(void) {
 				printf("Error: Invalid input.\nPlease enter again the heap index and the number of removed objects.\n");
 				getMove(turnMove);
 			}
-			printf("You take %d objects from heap %d.\n",turnMove[1],turnMove[0]);
+			printf("You take %d objects from heap %d.\n",turnMove[1]+1,turnMove[0]);
 		}
 		else{
 			get_computer_move(heap_num, heapsSizes,turnMove);
 			move(heap_num, heapsSizes, turnMove[0], turnMove[1]);
-			printf("Computer takes %d objects from heap %d.\n",turnMove[1],turnMove[0]);
+			printf("Computer takes %d objects from heap %d.\n",turnMove[1]+1,turnMove[0]);
 		}
 	}
-
+	if(turn%2==1){
+		printf("You win!\n");
+	}
+	else{
+		printf("Computer wins!\n");
+	}
+	return 0;
 }
