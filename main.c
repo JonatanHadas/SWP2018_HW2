@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main_aux.h"
-#define MAX_HEAPS 32
+#include "sp_nim.h"
 
 int main(void) {
-	int heap_num, check=0, turn=0, legal=1;
+	int heap_num, check=0, turn=0;
 	int heapsSizes[MAX_HEAPS];
 	int turnMove[2];
 	heap_num=numHeaps(MAX_HEAPS);
