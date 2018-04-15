@@ -35,16 +35,17 @@ int numHeaps(int maxNumHeaps){
 	return numHeaps;
 }
 
+
 void printStatus(int numHeaps, int* heaps, int turn){
 	int i=0;
-	printf("In turn %d heap sizes are:",&turn);
+	printf("In turn %d heap sizes are:",turn);
 	for(i=0;i<numHeaps;i++){
-		printf(" h%d=%d",&i, heaps+i);
+		printf(" h%d=%d",&i, heaps[i]);
 	}
 	printf(".\n");
 }
 
-void getMove(move[2]){
+void getMove(int move[2]){
 	int scanCheck=0;
 	scanCheck=scanf("%d %d",move[0],move[1]);
 	if(scanCheck==0){
@@ -52,5 +53,4 @@ void getMove(move[2]){
 	}
 	move[0]-=1;
 }
-
 
