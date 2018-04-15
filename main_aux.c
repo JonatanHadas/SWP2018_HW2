@@ -39,7 +39,7 @@ void printStatus(int numHeaps, int* heaps, int turn){
 	int i=0;
 	printf("In turn %d heap sizes are:",turn);
 	for(i=0;i<numHeaps;i++){
-		printf(" h%d=%d",i, heaps[i]);
+		printf(" h%d=%d",i+1, heaps[i]);
 	}
 	printf(".\n");
 }
