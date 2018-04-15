@@ -13,6 +13,7 @@ int main(void) {
 	if(check==0) return 0;
 	while(check_win(heap_num, heapsSizes)==0){
 		turn++;
+		printStatus(heap_num, heapsSizes, turn);
 		if(turn%2==1){
 			printf("Your turn: please enter the heap index and the number of removed objects.\n");
 			getMove(turnMove);
@@ -20,12 +21,12 @@ int main(void) {
 				printf("Error: Invalid input.\nPlease enter again the heap index and the number of removed objects.\n");
 				getMove(turnMove);
 			}
-			printf("You take %d objects from heap %d.\n",turnMove[1]+1,turnMove[0]);
+			printf("You take %d objects from heap %d.\n",turnMove[1],turnMove[0]+1);
 		}
 		else{
 			get_computer_move(heap_num, heapsSizes,turnMove);
 			move(heap_num, heapsSizes, turnMove[0], turnMove[1]);
-			printf("Computer takes %d objects from heap %d.\n",turnMove[1]+1,turnMove[0]);
+			printf("Computer takes %d objects from heap %d.\n",turnMove[1],turnMove[0]+1);
 		}
 	}
 	if(turn%2==1){
